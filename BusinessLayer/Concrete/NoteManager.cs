@@ -11,7 +11,7 @@ namespace BusinessLayer.Concrete
 {
     public class NoteManager : INoteService
     {
-        private readonly INoteDal _noteDal;
+        private  INoteDal _noteDal;
 
         public NoteManager(INoteDal noteDal)
         {
