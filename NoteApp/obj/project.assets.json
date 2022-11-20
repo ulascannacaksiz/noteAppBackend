@@ -1093,6 +1093,20 @@
           }
         }
       },
+      "BusinessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DataAccessLayer": "1.0.0",
+          "EntityLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessLayer.dll": {}
+        }
+      },
       "DataAccessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2939,6 +2953,11 @@
         "version.txt"
       ]
     },
+    "BusinessLayer/1.0.0": {
+      "type": "project",
+      "path": "../BusinessLayer/BusinessLayer.csproj",
+      "msbuildProject": "../BusinessLayer/BusinessLayer.csproj"
+    },
     "DataAccessLayer/1.0.0": {
       "type": "project",
       "path": "../DataAccessLayer/DataAccessLayer.csproj",
@@ -2952,6 +2971,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BusinessLayer >= 1.0.0",
       "DataAccessLayer >= 1.0.0",
       "EntityLayer >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.11",
@@ -2996,6 +3016,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\UlasCan\\source\\repos\\NoteApp\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\UlasCan\\source\\repos\\NoteApp\\BusinessLayer\\BusinessLayer.csproj"
+            },
             "C:\\Users\\UlasCan\\source\\repos\\NoteApp\\DataAccessLayer\\DataAccessLayer.csproj": {
               "projectPath": "C:\\Users\\UlasCan\\source\\repos\\NoteApp\\DataAccessLayer\\DataAccessLayer.csproj"
             },

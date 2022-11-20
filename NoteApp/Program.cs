@@ -1,4 +1,8 @@
+using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -39,7 +43,8 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-//builder.Services.ConfigureIdentity();
+builder.Services.AddScoped<INoteService, NoteManager>();
+builder.Services.AddScoped<INoteDal, EfNoteRepository>();
 
 var app = builder.Build();
 

@@ -9,5 +9,6 @@ namespace DataAccessLayer.Abstract
 {
     public interface INoteDal:IGenericDal<Note>
     {
+        Note GetNoteByUserId(int id,int userId);
     }
 }

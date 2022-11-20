@@ -18,6 +18,16 @@ namespace BusinessLayer.Concrete
             _noteDal = noteDal;
         }
 
+        public List<Note> GetAllNotesByUser(int userId)
+        {
+            return _noteDal.GetListFilter(x=>x.AppUserId ==userId);
+        }
+
+        public Note GetNoteByUserId(int id, int userId)
+        {
+           return _noteDal.GetNoteByUserId(id, userId);
+        }
+
         public void TAdd(Note t)
         {
             _noteDal.Insert(t);
@@ -35,7 +45,9 @@ namespace BusinessLayer.Concrete
 
         public List<Note> TGetList()
         {
-            return _noteDal.GetList();
+            throw new NotImplementedException();
+            
+            //return _noteDal.GetList();
         }
 
         public void TUpdate(Note t)

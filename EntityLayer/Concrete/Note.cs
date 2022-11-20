@@ -15,7 +15,6 @@ namespace EntityLayer.Concrete
         public AppUser AppUser { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime EditedDate { get; set; }
-        public int UserId { get; set; }
         public bool Status { get; set; }
 
     }

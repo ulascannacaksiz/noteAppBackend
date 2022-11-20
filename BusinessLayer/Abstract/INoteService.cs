@@ -9,5 +9,7 @@ namespace BusinessLayer.Abstract
 {
     public interface INoteService:IGenericService<Note>
     {
+        Note GetNoteByUserId(int id, int userId);
+        List<Note> GetAllNotesByUser(int userId);
     }
 }
