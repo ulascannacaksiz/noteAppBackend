@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 //using Microsoft.IdentityModel.JsonWebTokens;
@@ -12,6 +13,7 @@ namespace NoteApp.Controllers
 {
     [ApiController]
     [Route("[controller]/[action]")]
+    [EnableCors("AllowOrigin")]
     public class UserController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -42,7 +44,7 @@ namespace NoteApp.Controllers
                     var result = await _userManager.CreateAsync(appuser, model.Password);
                     if (result.Succeeded)
                     {
-                        return Ok();
+                        return Ok("Kullannıcı başarıyla kayıt edildi");
                     }
                 }
                 else
